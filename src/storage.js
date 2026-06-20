@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
+import { Brain, Headphones, Mic } from 'lucide-react'
 
 const KEY = 'ielts-tracker-v1'
 
 export const HABITS = [
-  { key: 'anki', label: 'Anki (ôn từ)', emoji: '🧠' },
-  { key: 'listening', label: 'Nghe', emoji: '🎧' },
-  { key: 'speaking', label: 'Nói / Shadowing', emoji: '🗣️' },
+  { key: 'anki', label: 'Anki (ôn từ)', Icon: Brain },
+  { key: 'listening', label: 'Nghe', Icon: Headphones },
+  { key: 'speaking', label: 'Nói / Shadowing', Icon: Mic },
 ]
 
 export const GRAMMAR_TOPICS = [

@@ -1,3 +1,4 @@
+import { Flame, Trophy } from 'lucide-react'
 import { Card, Bar, Stat } from './ui.jsx'
 import {
   HABITS, GRAMMAR_TOPICS, todayStr, isComplete, currentStreak,
@@ -32,7 +33,7 @@ export default function Dashboard({ data, setData }) {
       <Card>
         <div className="hero">
           <div className="hero-streak">
-            <div className="flame">🔥</div>
+            <div className="flame"><Flame size={38} strokeWidth={2.2} /></div>
             <div>
               <div className="hero-num">{streak}</div>
               <div className="hero-cap">ngày liên tiếp</div>
@@ -54,7 +55,7 @@ export default function Dashboard({ data, setData }) {
               className={`habit ${day[h.key] ? 'on' : ''}`}
               onClick={() => setToday({ [h.key]: !day[h.key] })}
             >
-              <span className="habit-emoji">{h.emoji}</span>
+              <h.Icon className="habit-emoji" size={18} />
               <span>{h.label}</span>
               <span className="habit-check">{day[h.key] ? '✓' : ''}</span>
             </button>
@@ -99,7 +100,9 @@ export default function Dashboard({ data, setData }) {
                 <span>S {Number(latest.S).toFixed(1)}</span>
               </div>
               <div className={`pill ${reached ? 'pill-ok' : ''}`}>
-                {reached ? '🎉 Đã đạt 6.5 — sẵn sàng cho Giai đoạn 4' : `Mục tiêu 6.5 · cao nhất hiện tại: ${bestBand || '—'}`}
+                {reached
+                  ? (<><Trophy size={14} /> Đã đạt 6.5 — sẵn sàng cho Giai đoạn 4</>)
+                  : `Mục tiêu 6.5 · cao nhất hiện tại: ${bestBand || '—'}`}
               </div>
             </>
           ) : (

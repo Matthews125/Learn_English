@@ -1,3 +1,4 @@
+import { Flag, Lightbulb, AlertTriangle, ExternalLink } from 'lucide-react'
 import { Card } from './ui.jsx'
 import {
   META, PRINCIPLES, PHASES, RESOURCES, DEVICES, WEEKLY, WEEKLY_DAILY, DAILY, CHECKLIST, EXAM_NOTE,
@@ -23,7 +24,7 @@ export default function PlanView() {
               </div>
               <p className="phase-focus">{ph.focus}</p>
               <ul>{ph.bullets.map((b, i) => <li key={i}>{b}</li>)}</ul>
-              <div className="milestone">🎯 {ph.milestone}</div>
+              <div className="milestone"><Flag size={14} /><span>{ph.milestone}</span></div>
             </div>
           ))}
         </div>
@@ -39,7 +40,7 @@ export default function PlanView() {
                   <a className="res-item" key={r.name} href={r.url} target="_blank" rel="noreferrer">
                     <div className="res-item-top">
                       <span className="res-name">{r.name}</span>
-                      <span className="res-go">Mở ↗</span>
+                      <span className="res-go"><ExternalLink size={12} /> Mở</span>
                     </div>
                     <span className="res-note">{r.note}</span>
                   </a>
@@ -61,7 +62,7 @@ export default function PlanView() {
             </tbody>
           </table>
         </div>
-        <p className="tip">💡 Tạo 1 tài khoản AnkiWeb (free) → thẻ tự đồng bộ máy tính ↔ điện thoại; ôn dở ở công ty, về nhà học tiếp.</p>
+        <p className="tip"><Lightbulb size={14} /><span>Tạo 1 tài khoản AnkiWeb (free) → thẻ tự đồng bộ máy tính ↔ điện thoại; ôn dở ở công ty, về nhà học tiếp.</span></p>
       </Card>
 
       <Card title="Lịch tuần (Giai đoạn 1)">
@@ -89,7 +90,7 @@ export default function PlanView() {
             </tbody>
           </table>
         </div>
-        <p className="tip">⚠️ 22h khá muộn — hôm nào ở công ty rảnh, dời bớt việc học sâu vào ban ngày để ngủ đủ.</p>
+        <p className="tip"><AlertTriangle size={14} /><span>22h khá muộn — hôm nào ở công ty rảnh, dời bớt việc học sâu vào ban ngày để ngủ đủ.</span></p>
       </Card>
 
       <Card title="Checklist Tuần 1 (chi phí 0đ)">

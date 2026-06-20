@@ -28,7 +28,7 @@ export default function DailyTracker({ data, setData }) {
         <div className="habit-row">
           {HABITS.map((h) => (
             <button key={h.key} className={`habit ${day[h.key] ? 'on' : ''}`} onClick={() => setDay({ [h.key]: !day[h.key] })}>
-              <span className="habit-emoji">{h.emoji}</span>
+              <h.Icon className="habit-emoji" size={18} />
               <span>{h.label}</span>
               <span className="habit-check">{day[h.key] ? '✓' : ''}</span>
             </button>
@@ -53,7 +53,7 @@ export default function DailyTracker({ data, setData }) {
           <div className="table-wrap">
             <table>
               <thead>
-                <tr><th>Ngày</th>{HABITS.map((h) => <th key={h.key}>{h.emoji}</th>)}<th>Phút</th><th>Nội dung</th><th></th></tr>
+                <tr><th>Ngày</th>{HABITS.map((h) => <th key={h.key} className="center"><h.Icon size={15} /></th>)}<th>Phút</th><th>Nội dung</th><th></th></tr>
               </thead>
               <tbody>
                 {rows.map(([key, v]) => (

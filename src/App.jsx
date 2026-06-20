@@ -1,4 +1,8 @@
 import { useRef, useState } from 'react'
+import {
+  LayoutDashboard, Map, CalendarCheck, Target, TrendingUp, ClipboardList,
+  Download, Upload, GraduationCap,
+} from 'lucide-react'
 import { META } from './planData.js'
 import { useTracker, exportData, parseImport } from './storage.js'
 import Dashboard from './components/Dashboard.jsx'
@@ -9,12 +13,12 @@ import Progress from './components/Progress.jsx'
 import ErrorLog from './components/ErrorLog.jsx'
 
 const TABS = [
-  { id: 'dashboard', label: 'Tổng quan', icon: '📊' },
-  { id: 'plan', label: 'Kế hoạch', icon: '🗺️' },
-  { id: 'daily', label: 'Theo dõi', icon: '✅' },
-  { id: 'mock', label: 'Điểm Mock', icon: '🎯' },
-  { id: 'progress', label: 'Tiến độ', icon: '📈' },
-  { id: 'errors', label: 'Sổ lỗi', icon: '📝' },
+  { id: 'dashboard', label: 'Tổng quan', Icon: LayoutDashboard },
+  { id: 'plan', label: 'Kế hoạch', Icon: Map },
+  { id: 'daily', label: 'Theo dõi', Icon: CalendarCheck },
+  { id: 'mock', label: 'Điểm Mock', Icon: Target },
+  { id: 'progress', label: 'Tiến độ', Icon: TrendingUp },
+  { id: 'errors', label: 'Sổ lỗi', Icon: ClipboardList },
 ]
 
 export default function App() {
@@ -42,26 +46,29 @@ export default function App() {
     <div className="app">
       <header className="topbar">
         <div className="brand">
-          <span className="brand-icon">📘</span>
+          <span className="brand-icon"><GraduationCap size={24} strokeWidth={2} /></span>
           <div>
             <h1>{META.title}</h1>
             <p>{META.subtitle}</p>
           </div>
         </div>
         <div className="actions">
-          <button className="btn-ghost" onClick={() => exportData(data)}>⬇ Sao lưu</button>
-          <button className="btn-ghost" onClick={() => fileRef.current?.click()}>⬆ Khôi phục</button>
+          <button className="btn-ghost" onClick={() => exportData(data)}><Download size={15} /> Sao lưu</button>
+          <button className="btn-ghost" onClick={() => fileRef.current?.click()}><Upload size={15} /> Khôi phục</button>
           <input ref={fileRef} type="file" accept="application/json,.json" hidden onChange={onImport} />
         </div>
       </header>
 
       <nav className="tabs">
-        {TABS.map((t) => (
-          <button key={t.id} className={`tab ${tab === t.id ? 'active' : ''}`} onClick={() => setTab(t.id)}>
-            <span className="tab-icon">{t.icon}</span>
-            <span className="tab-label">{t.label}</span>
-          </button>
-        ))}
+        {TABS.map((t) => {
+          const Icon = t.Icon
+          return (
+            <button key={t.id} className={`tab ${tab === t.id ? 'active' : ''}`} onClick={() => setTab(t.id)}>
+              <Icon className="tab-icon" size={17} />
+              <span className="tab-label">{t.label}</span>
+            </button>
+          )
+        })}
       </nav>
 
       <main className="content">

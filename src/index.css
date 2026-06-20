@@ -230,3 +230,21 @@ td.center, th.center { text-align: center; }
   .tab.active .tab-label { display: inline; }
   .hero-num { font-size: 34px; }
 }
+
+/* ---- icons (lucide) ---- */
+svg { display: inline-block; vertical-align: middle; }
+.brand-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; border-radius: 11px;
+  background: var(--primary); color: #fff; flex: none;
+}
+.btn-ghost, .btn-primary { display: inline-flex; align-items: center; gap: 6px; justify-content: center; }
+.tab-icon { flex: none; }
+.habit-emoji { flex: none; color: var(--primary); }
+.flame { color: #f97316; display: inline-flex; align-items: center; }
+.pill { display: inline-flex; align-items: center; gap: 6px; }
+.milestone { display: flex; align-items: flex-start; gap: 7px; }
+.milestone svg { flex: none; margin-top: 1px; color: var(--primary); }
+.tip { display: flex; align-items: flex-start; gap: 6px; }
+.tip svg { flex: none; margin-top: 1px; }
+.res-go { display: inline-flex; align-items: center; gap: 3px; }
