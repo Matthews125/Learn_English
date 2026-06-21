@@ -188,6 +188,10 @@ input:focus, select:focus { outline: 2px solid var(--primary); outline-offset: -
 .tip { font-size: 12.5px; color: var(--muted); margin: 10px 0 0; }
 .checklist { margin: 0; padding-left: 20px; }
 .checklist li { margin-bottom: 6px; }
+.ladder { margin: 8px 0 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; }
+.ladder li { font-size: 13.5px; }
+.ladder li strong { display: block; color: var(--primary); margin-bottom: 2px; }
+.ladder li span { color: var(--text); }
 
 /* ---- tables ---- */
 .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }

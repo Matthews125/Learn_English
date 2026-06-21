@@ -1,7 +1,7 @@
 import { Flag, Lightbulb, AlertTriangle, ExternalLink } from 'lucide-react'
 import { Card } from './ui.jsx'
 import {
-  META, PRINCIPLES, PHASES, RESOURCES, DEVICES, WEEKLY, WEEKLY_DAILY, DAILY, CHECKLIST, EXAM_NOTE,
+  META, PRINCIPLES, PHASES, WRITING_LADDER, RESOURCES, DEVICES, WEEKLY, WEEKLY_DAILY, DAILY, CHECKLIST, EXAM_NOTE,
 } from '../planData.js'
 
 export default function PlanView() {
@@ -28,6 +28,18 @@ export default function PlanView() {
             </div>
           ))}
         </div>
+      </Card>
+
+      <Card title="Lộ trình viết — đừng ép 200 từ ngay">
+        <p className="goal">Thấy khó viết 200 từ là chuyện bình thường. Leo từng bậc, vững bậc dưới mới lên bậc trên:</p>
+        <ol className="ladder">
+          {WRITING_LADDER.map((w, i) => (
+            <li key={i}>
+              <strong>{w.step}</strong>
+              <span>{w.detail}</span>
+            </li>
+          ))}
+        </ol>
       </Card>
 
       <Card title="Tài nguyên (tất cả miễn phí) — bấm vào để mở & học luôn">

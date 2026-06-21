@@ -1,60 +1,60 @@
 // Toàn bộ nội dung kế hoạch dưới dạng dữ liệu — sửa ở đây là cập nhật trang Kế hoạch.
 
 export const META = {
-  title: 'Kế hoạch học tiếng Anh → IELTS 6.5+',
-  subtitle: 'Bản 100% miễn phí · học mọi thiết bị · lộ trình theo cột mốc',
-  goal: 'Từ B1 yếu → IELTS 6.5+ (B2 vững). Học chắc nền rồi mới thi — không đặt hạn cứng.',
+  title: 'Tiếng Anh: Giao tiếp lưu loát → IELTS 6.5+',
+  subtitle: 'Ưu tiên nói lưu loát trước · IELTS sau · 100% miễn phí · đa thiết bị',
+  goal: 'Mục tiêu trước mắt: GIAO TIẾP lưu loát, rõ ràng, tự tin. Vững rồi mới chuyển sang luyện IELTS 6.5+. Cùng một nền tảng (ngữ pháp · từ vựng · nghe · nói) — chỉ khác thứ tự ưu tiên.',
 }
 
 export const PRINCIPLES = [
-  'Đều đặn quan trọng hơn cường độ — 60–90′ học sâu/ngày + học vụn là đủ.',
-  'Xây nền trước, luyện đề sau — đề thật để dành Giai đoạn 3.',
-  'Nạp input khổng lồ + ép output (nói/viết) mỗi ngày.',
-  'Mỗi từ/cấu trúc mới phải được gặp lại (Anki) và được dùng — để không quên như lần trước.',
+  'Ưu tiên số 1: NÓI mỗi ngày — mục tiêu trước mắt là giao tiếp lưu loát; IELTS để sau.',
+  'Ngữ pháp phải CÀY BÀI TẬP (không chỉ đọc lý thuyết) — sai đâu sửa đó, đó là cách nhớ lâu.',
+  'Viết theo bậc thang: câu → câu nối → đoạn nhỏ → đoạn đủ → bài 200 từ. Đừng ép 200 từ khi chưa vững.',
+  'Đều đặn hơn cường độ; nạp input nhiều + ép output (nói/viết) mỗi ngày.',
 ]
 
 export const PHASES = [
   {
     id: 0, name: 'Giai đoạn 0 — Đo trình độ gốc', period: 'Tuần 1',
-    focus: 'Lấy mốc khởi điểm để theo dõi tiến bộ.',
+    focus: 'Biết điểm xuất phát để theo dõi.',
     bullets: [
-      'Làm 1 đề mock free (ieltsonlinetests.com / Road to IELTS Free) → ghi band 4 kỹ năng vào tab Điểm Mock.',
-      'Viết 1 đoạn ~150 từ trên Write & Improve → lấy mức CEFR.',
+      'Ghi âm nói 1 phút về bản thân + viết 5 câu → xem mình kẹt ở đâu (nói hay ngữ pháp).',
+      'Làm 1 đề mock free để biết band tham khảo (chưa cần lo điểm).',
     ],
-    milestone: 'Có số liệu khởi điểm để 2–3 tháng sau đo lại.',
+    milestone: 'Biết rõ mình yếu/mạnh ở đâu.',
   },
   {
-    id: 1, name: 'Giai đoạn 1 — Xây lại nền', period: '≈ Tháng 1–3',
-    focus: 'Lấy lại ngữ pháp + từ vựng lõi + nghe vào tai.',
+    id: 1, name: 'Giai đoạn 1 — Nền tảng + bắt đầu nói', period: '≈ Tháng 1–3',
+    focus: 'Lấy lại ngữ pháp (CÀY BÀI TẬP) + từ vựng + nghe nhiều + nói mỗi ngày.',
     bullets: [
-      'Ngữ pháp B1→B2 theo englishpage.com + perfect-english-grammar.com + BBC/British Council.',
-      'Anki 10–15 từ/ngày, mục tiêu ~1500 từ.',
-      '6 Minute English mỗi ngày + shadowing.',
+      'Ngữ pháp: mỗi ngày 1 chủ đề + LÀM BÀI TẬP (test-english.com, englishpage.com, agendaweb).',
+      'Anki 10–15 từ/ngày; 6 Minute English + shadowing mỗi ngày.',
+      'Nói mỗi ngày với AI: bắt đầu từ câu ngắn về chủ đề quen, không sợ sai.',
     ],
-    milestone: 'Cột mốc A: nghe 6ME không cần transcript · Write&Improve B1+→B2 · xong các chủ đề ngữ pháp lõi · Anki ~1500 từ.',
+    milestone: 'Cột mốc A: nói được 4–5 câu liền mạch về chủ đề quen; bài tập ngữ pháp cơ bản (thì, mạo từ, câu đơn/ghép) đúng > 80%.',
   },
   {
-    id: 2, name: 'Giai đoạn 2 — Lên B2 thật sự', period: '≈ Tháng 3–6',
-    focus: 'Nói trôi hơn, viết có cấu trúc.',
+    id: 2, name: 'Giai đoạn 2 — GIAO TIẾP LƯU LOÁT (mục tiêu trước mắt)', period: '≈ Tháng 3–6',
+    focus: 'Nói trôi, ít khựng, tự tin về nhiều chủ đề đời thường; viết được đoạn ngắn có cấu trúc.',
     bullets: [
-      'Input khó dần (TED, podcast dài), chủ đề học thuật.',
-      'Viết đoạn → bài ngắn trên Write & Improve + AI sửa.',
-      'Mỗi ngày 1 câu hỏi IELTS Part 1/2: ghi âm + nghe lại + AI sửa.',
+      'Nói hằng ngày: hội thoại dài hơn với AI, kể chuyện, nêu ý kiến — giảm dần thời gian “nghĩ”.',
+      'Viết theo bậc thang (xem khung “Lộ trình viết”): từ 3–4 câu → 1 đoạn hoàn chỉnh.',
+      'Ngữ pháp nâng dần: câu điều kiện, bị động, mệnh đề quan hệ + bài tập.',
     ],
-    milestone: 'Cột mốc B: mock ≈ 5.5–6.0 · Write&Improve ổn định B2 · nói 2 phút ít khựng.',
+    milestone: 'CỘT MỐC CHÍNH: giao tiếp lưu loát, rõ ràng, tự tin về chủ đề đời thường mà không phải dừng nghĩ lâu. Đạt rồi mới chuyển sang IELTS.',
   },
   {
-    id: 3, name: 'Giai đoạn 3 — Luyện chiến thuật IELTS', period: '≈ Tháng 6–9',
-    focus: 'Cày đề + kỹ thuật phòng thi.',
+    id: 3, name: 'Giai đoạn 3 — Chuyển sang IELTS', period: 'Sau khi đã lưu loát',
+    focus: 'Giờ mới học chiến thuật thi + viết essay 200+ từ (lúc này dễ hơn nhiều vì nền đã chắc).',
     bullets: [
-      'Writing: dàn bài Task 2 (ielts-simon, IELTS Liz), 2–3 bài/tuần, AI chấm.',
-      'Speaking: trọn bộ Part 1–2–3 với AI đóng vai giám khảo.',
+      'Học format 4 kỹ năng; viết Task 2 theo dàn bài (ielts-simon, IELTS Liz) + AI chấm.',
+      'Speaking Part 1–2–3 với AI đóng vai giám khảo.',
       'Mỗi tuần 1 mock đầy đủ → ghi sổ lỗi.',
     ],
     milestone: 'Cột mốc C: mock ổn định ≥ 6.5 cả 4 kỹ năng (Writing & Speaking ≥ 6.0).',
   },
   {
-    id: 4, name: 'Giai đoạn 4 — Tinh chỉnh & thi', period: 'Khi đạt Cột mốc C',
+    id: 4, name: 'Giai đoạn 4 — Tinh chỉnh & thi', period: 'Khi mock ≥ 6.5',
     focus: 'Cày mock dày, sửa lỗi lặp lại, đăng ký thi.',
     bullets: [
       '2–3 tuần mock dày + sửa lỗi lặp lại.',
@@ -65,12 +65,23 @@ export const PHASES = [
   },
 ]
 
+export const WRITING_LADDER = [
+  { step: 'Bậc 1 — Câu chắc', detail: 'Mỗi ngày viết 5–10 câu đơn đúng ngữ pháp (chủ ngữ + động từ + bổ ngữ). Dán vào Write & Improve hoặc nhờ AI sửa.' },
+  { step: 'Bậc 2 — Nối câu', detail: 'Dùng and / but / because / so / although để ghép thành câu ghép & câu phức. Viết 5 câu nối mỗi ngày.' },
+  { step: 'Bậc 3 — Đoạn mini (3–4 câu)', detail: '1 câu chủ đề → 2 câu giải thích/ví dụ → (1 câu kết). Mỗi ngày 1 đoạn nhỏ.' },
+  { step: 'Bậc 4 — Đoạn đủ (~100 từ)', detail: 'Topic sentence + 3 ý hỗ trợ có ví dụ + câu kết. Dùng linking words: firstly, for example, however, in conclusion.' },
+  { step: 'Bậc 5 — Bài ~200 từ', detail: 'Khi bậc 4 đã mượt: mở bài – 2 đoạn thân – kết bài. Lúc này (Giai đoạn 3) viết 200 từ không còn đáng sợ.' },
+]
+
 export const RESOURCES = {
   'Ngữ pháp': [
     { name: 'englishpage.com', url: 'https://www.englishpage.com', note: 'Bài giảng + bài tập tự chấm (xương sống thay sách)' },
     { name: 'perfect-english-grammar.com', url: 'https://www.perfect-english-grammar.com', note: 'Giải thích ngắn + bài tập + PDF free' },
     { name: 'British Council — Grammar', url: 'https://learnenglish.britishcouncil.org/grammar', note: 'Theo cấp độ' },
     { name: 'BBC Learning English — Grammar', url: 'https://www.bbc.co.uk/learningenglish', note: 'Video ngắn' },
+    { name: 'test-english.com', url: 'https://test-english.com', note: 'Ngữ pháp A1–C1 + bài tập có giải thích (rất hợp cày)' },
+    { name: 'agendaweb.org', url: 'https://agendaweb.org/grammar-exercises.html', note: 'Kho bài tập ngữ pháp khổng lồ theo chủ đề' },
+    { name: 'english-grammar.at', url: 'https://www.english-grammar.at', note: 'Worksheet/bài tập PDF tải về làm' },
   ],
   'Từ vựng': [
     { name: 'Anki (+ AnkiWeb free)', url: 'https://apps.ankiweb.net', note: 'SRS, đồng bộ máy tính ↔ điện thoại' },
@@ -91,7 +102,7 @@ export const RESOURCES = {
     { name: 'Project Gutenberg', url: 'https://www.gutenberg.org', note: 'Sách free (khi đã B1+)' },
   ],
   'Speaking': [
-    { name: 'ChatGPT', url: 'https://chat.openai.com', note: 'AI đóng vai giám khảo (free)' },
+    { name: 'ChatGPT', url: 'https://chat.openai.com', note: 'AI luyện hội thoại hằng ngày + sửa lỗi (free)' },
     { name: 'Claude', url: 'https://claude.ai', note: 'AI luyện hội thoại + sửa lỗi (free)' },
     { name: 'Google Gemini', url: 'https://gemini.google.com', note: 'AI free' },
     { name: 'YouGlish', url: 'https://youglish.com', note: 'Nghe phát âm từ trong video thật' },
